@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2019 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mtrl_card_spacing"
+        android:clickable="true"
+        android:focusable="true"
+        android:backgroundTint="#22FFFFCC"
+        android:minHeight="@dimen/cat_card_rich_media_demo_min_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/cat_card_double_spacing"
+                android:paddingBottom="@dimen/cat_card_single_spacing">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/rich_media_card_item_company_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="@dimen/cat_card_single_spacing"
+                    android:layout_marginRight="@dimen/cat_card_single_spacing"
+                    android:contentDescription="description"
+                    app:srcCompat="@mipmap/sigularity"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginStart="@dimen/cat_card_single_spacing"
+                    android:layout_marginLeft="@dimen/cat_card_single_spacing"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/rich_media_card_item_title"
+                        style="?attr/textAppearanceHeadline6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="title"/>
+
+                    <TextView
+                        android:id="@+id/rich_media_card_item_sec_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/cat_card_single_spacing"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="secondary_line_text"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/rich_media_card_item_full_img"
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="description"
+                app:backgroundTint="@color/material_on_surface_emphasis_medium"
+                app:backgroundTintMode="add"
+                app:srcCompat="@mipmap/sigularity"/>
+
+            <TextView
+                android:id="@+id/rich_media_card_item_desp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/cat_card_double_spacing"
+                android:maxLines="2"
+                android:text="desp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/cat_card_single_spacing"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/cat_card_single_spacing"
+                    android:layout_marginRight="@dimen/cat_card_single_spacing"
+                    app:icon="@drawable/ic_star_vd_theme_24"
+                    android:text="Collect"/>
+
+                <com.google.android.material.button.MaterialButton
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/cat_card_single_spacing"
+                    android:layout_marginRight="@dimen/cat_card_single_spacing"
+                    app:icon="@drawable/ic_toast_24px"
+                    android:text="Comment"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
